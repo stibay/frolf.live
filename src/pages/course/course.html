@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>course</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ng-container *ngIf="auth.user | async as user">
+
+    <ion-list>
+      <ion-item *ngFor="let course of courses | async; trackBy: trackByFn">
+        <h2>{{ course.name }}</h2>
+
+        <course-review [courseId]="course.id" [userId]="user.uid"></course-review>
+
+      </ion-item>
+    </ion-list>
+
+  </ng-container>
+</ion-content>

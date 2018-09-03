@@ -1,0 +1,8 @@
+{
+  "name": "frolf",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "76f89492"
+}
